@@ -29,14 +29,14 @@ const Registration = () => {
         }
       }
 
-      const response = await axios.post("http://localhost:3000/register", formData, {
+      const response = await axios.post("https://backend-two-phi-97.vercel.app/register", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       if (response.data.success) {
         toast.success(response.data.message);
         reset();
-        // ✅ ফাইল ইনপুট clear
+     
         const fileInput = document.querySelector("input[type=file]");
         if (fileInput) fileInput.value = "";
         navigate("/students");
@@ -56,7 +56,7 @@ const Registration = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="max-w-4xl mx-auto p-8 rounded-lg"
       >
-        <h1 className="text-4xl font-serif text-yellow-400 font-bold text-center mb-10">
+        <h1 className="text-xl lg:text-4xl font-serif text-yellow-400 font-bold text-center mb-10">
           Student Registration Form
         </h1>
 
