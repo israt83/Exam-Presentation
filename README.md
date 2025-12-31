@@ -43,9 +43,6 @@ A full-stack student registration system with image upload (Cloudinary), secure 
 
 ---
 
-## 📂 Project Structure
----
-
 ## 📌 How to Run
 
 ### Backend
